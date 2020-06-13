@@ -36,9 +36,9 @@ const summation2 = num => {
   if(num <= 0){
     return 0
   } else {
-    return summation2(num - 1);
+    return num + summation2(num - 1);
   }
 };
 
 console.log("Closure 2", summation(4))
-console.log("Closure 2 Recursion", summation(4))
+console.log("Closure 2 Recursion", summation2(4))
